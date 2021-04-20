@@ -6,13 +6,4 @@
       <class name="com.att.test.SecureTest"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.att.test.SecureTest">
-        <methods>
-          <include name="SecureTestT"/>
-        </methods>
-      </class> <!-- com.att.test.SecureTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

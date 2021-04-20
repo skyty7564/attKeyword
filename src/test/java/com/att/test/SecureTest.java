@@ -13,5 +13,18 @@ public class SecureTest {
 		keyWordEngine = new KeyWordEngine();
 		keyWordEngine.startExecution("test1");
 	}
+	@Test
+	public void SecureTestT2()
+	{
+		keyWordEngine = new KeyWordEngine();
+		keyWordEngine.startExecution("test2");
+	}
+	@Test
+	public void SecureTestT3()
+	{
+		keyWordEngine = new KeyWordEngine();
+		keyWordEngine.startExecution("test3");
+	}
+
 
 }

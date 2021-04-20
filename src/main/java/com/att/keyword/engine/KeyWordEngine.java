@@ -93,8 +93,9 @@ public class KeyWordEngine {
 				System.out.println(locatorValue + ":" + action);
 				switch (locatorName) {
 				case "id":
+					System.out.println("locator ID");
 					element = driver.findElement(By.id(locatorValue));
-					if (action.equalsIgnoreCase("sendkeys")) {
+					if (action.equalsIgnoreCase("sendkey")) {
 						element.clear();
 						element.sendKeys(value);
 					} else if (action.equalsIgnoreCase("click")) {
@@ -103,19 +104,21 @@ public class KeyWordEngine {
 					locatorName = null;
 					break;
 				case "linkText":
+					System.out.println("locator linktext");
 					element = driver.findElement(By.linkText(locatorValue));
 					element.click();
 					locatorName = null;
 					break;
 				case "css":
+					System.out.println("locator css");
 				    element = driver.findElement(By.cssSelector(locatorValue));
 				    element.click();
 				    	
 					locatorName=null;
 					break;
-	
+					
 				case "xpath":
-					//*[@id="mui-p-87569-P-notCreated"]/div[1]/div/div/div/button[2]
+				
 				    element = driver.findElement(By.xpath(locatorValue));
 					if(action.equalsIgnoreCase("validate"))
 					{
@@ -129,8 +132,17 @@ public class KeyWordEngine {
 				    	
 					locatorName=null;
 					break;
-				
-
+				case "class":
+					System.out.println("locator validate");
+					element = driver.findElement(By.className(locatorValue));
+					System.out.println(element.getText());
+					System.out.println(value);
+					if(element.getText().equalsIgnoreCase(value))
+					{
+						System.out.println("Match");
+					}
+					break;
+			
 				default:
 					break;
 
